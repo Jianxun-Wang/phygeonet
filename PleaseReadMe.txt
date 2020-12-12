@@ -1,0 +1,1 @@
+Han Gao: I highly suggest if you are mainly interested in applying CNN to solve PDE on 2-D irregular geometry. Please focus on case0. It has everything you need in a very compact way. And you will immediately get the essential spirit of this paper and all the utilities we used.
