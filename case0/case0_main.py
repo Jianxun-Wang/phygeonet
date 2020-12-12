@@ -142,22 +142,9 @@ def train(epoch):
 		fig1.savefig(str(epoch)+'T.pdf',bbox_inches='tight')
 		plt.close(fig1)		
 	return (mRes/len(training_data_loader)),(eV/len(training_data_loader))
-			
-			
-
-
-
-
-
-
-
-			
-			
-
 MRes=[]
 EV=[]
 TotalstartTime=time.time()
-
 for epoch in range(1,nEpochs+1):
 	mres,ev=train(epoch)
 	MRes.append(mres)
@@ -165,7 +152,6 @@ for epoch in range(1,nEpochs+1):
 	if ev<0.1:
 		break
 TimeSpent=time.time()-TotalstartTime
-
 plt.figure()
 plt.plot(MRes,'-*',label='Equation Residual')
 plt.xlabel('Epoch')
@@ -174,7 +160,6 @@ plt.legend()
 plt.yscale('log')
 plt.savefig('convergence.pdf',bbox_inches='tight')
 tikzplotlib.save('convergence.tikz')
-
 plt.figure()
 plt.plot(EV,'-x',label=r'$e_v$')
 plt.xlabel('Epoch')
@@ -183,105 +168,8 @@ plt.legend()
 plt.yscale('log')
 plt.savefig('error.pdf',bbox_inches='tight')
 tikzplotlib.save('error.tikz')
-
 EV=np.asarray(EV)
 MRes=np.asarray(MRes)
 np.savetxt('EV.txt',EV)
 np.savetxt('MRes.txt',MRes)
 np.savetxt('TimeSpent.txt',np.zeros([2,2])+TimeSpent)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-'''
-			dudx=Jinv[j:j+1,0:1,:,:]*(model.convdxi(outputU[j:j+1,0:1,:,:])*dydeta[j:j+1,0:1,:,:]-\
-			     model.convdeta(outputU[j:j+1,0:1,:,:])*dydxi[j:j+1,0:1,:,:])
-			d2udx2=Jinv[j:j+1,0:1,2:-2,2:-2]*(model.convdxi(dudx)*dydeta[j:j+1,0:1,2:-2,2:-2]-\
-			       model.convdeta(dudx)*dydxi[j:j+1,0:1,2:-2,2:-2])
-			dvdx=Jinv[j:j+1,0:1,:,:]*(model.convdxi(outputV[j:j+1,0:1,:,:])*dydeta[j:j+1,0:1,:,:]-\
-			     model.convdeta(outputV[j:j+1,0:1,:,:])*dydxi[j:j+1,0:1,:,:])
-			d2vdx2=Jinv[j:j+1,0:1,2:-2,2:-2]*(model.convdxi(dvdx)*dydeta[j:j+1,0:1,2:-2,2:-2]-\
-			       model.convdeta(dvdx)*dydxi[j:j+1,0:1,2:-2,2:-2])
-
-			dudy=Jinv[j:j+1,0:1,:,:]*(model.convdeta(outputU[j:j+1,0:1,:,:])*dxdxi[j:j+1,0:1,:,:]-\
-			     model.convdxi(outputU[j:j+1,0:1,:,:])*dxdeta[j:j+1,0:1,:,:])
-			d2udy2=Jinv[j:j+1,0:1,2:-2,2:-2]*(model.convdeta(dudy)*dxdxi[j:j+1,0:1,2:-2,2:-2]-\
-			     model.convdxi(dudy)*dxdeta[j:j+1,0:1,2:-2,2:-2])
-			dvdy=Jinv[j:j+1,0:1,:,:]*(model.convdeta(outputV[j:j+1,0:1,:,:])*dxdxi[j:j+1,0:1,:,:]-\
-			     model.convdxi(outputV[j:j+1,0:1,:,:])*dxdeta[j:j+1,0:1,:,:])
-			d2vdy2=Jinv[j:j+1,0:1,2:-2,2:-2]*(model.convdeta(dvdy)*dxdxi[j:j+1,0:1,2:-2,2:-2]-\
-			     model.convdxi(dvdy)*dxdeta[j:j+1,0:1,2:-2,2:-2])
-
-			dpdx=Jinv[j:j+1,0:1,:,:]*(model.convdxi(outputP[j:j+1,0:1,:,:])*dydeta[j:j+1,0:1,:,:]-\
-			     model.convdeta(outputP[j:j+1,0:1,:,:])*dydxi[j:j+1,0:1,:,:])
-			dpdy=Jinv[j:j+1,0:1,:,:]*(model.convdeta(outputP[j:j+1,0:1,:,:])*dxdxi[j:j+1,0:1,:,:]-\
-			     model.convdxi(outputP[j:j+1,0:1,:,:])*dxdeta[j:j+1,0:1,:,:])
-
-			continuity=dudx[:,:,2:-2,2:-2]+dudy[:,:,2:-2,2:-2];
-			#u*dudx+v*dudy
-			momentumX=outputU[j:j+1,:,2:-2,2:-2]*dudx+\
-			          outputV[j:j+1,:,2:-2,2:-2]*dvdx
-			#-dpdx+nu*lap(u)
-			forceX=-dpdx[0:,0:,2:-2,2:-2]+nu*(d2udx2+d2udy2)
-			# Xresidual
-			Xresidual=momentumX[0:,0:,2:-2,2:-2]-forceX   
-
-			#u*dvdx+v*dvdy
-			momentumY=outputU[j:j+1,:,2:-2,2:-2]*dvdx+\
-			          outputV[j:j+1,:,2:-2,2:-2]*dvdy
-			#-dpdy+nu*lap(v)
-			forceY=-dpdy[0:,0:,2:-2,2:-2]+nu*(d2vdx2+d2vdy2)
-			# Yresidual
-			Yresidual=momentumY[0:,0:,2:-2,2:-2]-forceY 
-			'''
