@@ -1,0 +1,7 @@
+Generate a Gaussian Random Field (Gaussian Process)
+Now we are working on a 3D spatial problem
+start to generate a Gaussian covariance matrix (cov and weighted cov)
+elapse Time for generate cov_sparse0.15442824363708496
+10 KL modes can cover 0.9908549500283386 of Random field
+elapse Time for KL-Expansion0.08223319053649902
+
