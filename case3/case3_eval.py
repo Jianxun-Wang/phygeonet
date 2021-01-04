@@ -17,8 +17,6 @@ from model import USCNN,USCNNSepPhi,USCNNSep,DDBasic
 from readOF import convertOFMeshToImage,convertOFMeshToImage_StructuredMesh
 from bfinverse.util.utility.foamFileOperation import writeLeftAndRightToFile
 from sklearn.metrics import mean_squared_error as calMSE
-
-
 nxOF=50
 nyOF=50
 scalarList=[-0.1,-0.075,-0.05,-0.025,0.0,0.025,0.05,0.075,0.1]
@@ -188,7 +186,6 @@ for i in range(len(scalarList)):
 	fig1.savefig('Para'+str(i)+'UVPCFD.pdf',bbox_inches='tight')
 	fig1.savefig('Para'+str(i)+'UVPCFD.png',bbox_inches='tight')
 	plt.close(fig1)
-
 VErrorNumpy=np.asarray([i.cpu().detach().numpy() for i in VelocityMagnitudeErrorRecord])
 PErrorNumpy=np.asarray([i.cpu().detach().numpy() for i in PErrorRecord])
 plt.figure()			
