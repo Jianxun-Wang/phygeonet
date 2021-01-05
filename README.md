@@ -12,7 +12,7 @@
 Geometry-Adaptive
 :-----:
 <p align="center">
-    <img align = 'center' height="200" src="case0/mesh_.pdf?raw=true">
+    <img align = 'center' height="200" src="case0/mesh.png?raw=true">
 </p>
 
 
