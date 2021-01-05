@@ -14,7 +14,6 @@ import matplotlib.cbook as cbook
 from matplotlib.path import Path
 from matplotlib.patches import PathPatch
 from torch.utils.data import Dataset, DataLoader
-from HanGaoRomUtility import GetGlobalDOFRawMatrix
 from foamFileOperation import readVectorFromFile,readScalarFromFile
 
 def convertOFMeshToImage(MeshFile,FileName,ext,mriLevel=0,plotFlag=True):

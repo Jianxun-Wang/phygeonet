@@ -19,7 +19,6 @@ from pyMesh import hcubeMesh, visualize2D, plotBC, plotMesh,setAxisLabel,\
 from model import USCNN
 from readOF import convertOFMeshToImage,convertOFMeshToImage_StructuredMesh
 ################################################################################
-from bfinverse.util.utility.foamFileOperation import writeLeftAndRightToFile
 from sklearn.metrics import mean_squared_error as calMSE
 import Ofpp
 pdffunc=normdistribution(0,1)

@@ -15,7 +15,6 @@ from pyMesh import hcubeMesh, visualize2D, plotBC, plotMesh,setAxisLabel,\
                    np2cuda,to4DTensor
 from model import USCNN,USCNNSepPhi,USCNNSep,DDBasic
 from readOF import convertOFMeshToImage,convertOFMeshToImage_StructuredMesh
-from bfinverse.util.utility.foamFileOperation import writeLeftAndRightToFile
 from sklearn.metrics import mean_squared_error as calMSE
 nxOF=50
 nyOF=50
