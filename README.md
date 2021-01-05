@@ -2,8 +2,22 @@
 [Physics-Informed Geometry-Adaptive Convolutional Neural Networks for Solving Steady-State Parametric PDEs on Irregular Domain](https://www.sciencedirect.com/science/article/pii/S0021999120308536?via%3Dihub)
 
 
-## Citation
 
+
+
+
+
+[Han Gao](https://scholar.google.com/citations?hl=en&view_op=list_works&gmla=AJsN-F6-fOLOhBPu7QzW2uth-Hf-G_bt_tHSDMMiyZcj8_6FHXwf-WEeU4kAbw-yIi78KROeDuBUzH-ScfCjKhZ6l2Kn_TNfM9jrZqHJrv2Je6jEUXh63is&user=iYlVxoYAAAAJ&gmla=AJsN-F6LfoB1VHGNZfAANgEgbRRthg3W5A4G11UmbG1tPTITC-iosEYuDwLC19VRTc-KU397DgoKeYGBx8iJIoKtMvWQPhofZgPbvy1u4q10FXWdz1OoHrc&sciund=5241665522552596380), [Luning Sun](https://scholar.google.com/citations?user=Jszc1B8AAAAJ&hl=en), [Jian-Xun Wang](http://sites.nd.edu/jianxun-wang/)
+
+Geometry-Adaptive
+:-----:
+<p align="center">
+    <img align = 'center' height="200" src="case0/mesh_.pdf?raw=true">
+</p>
+
+
+
+## Citation
 If you find this repo useful for your research, please consider to cite:
 ```latex
 @article{gao_phygeonet:_2020,
