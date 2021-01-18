@@ -16,15 +16,9 @@ import matplotlib.pyplot as plt # For plotting
 import re
 import tempfile
 import pdb
-from vtk.util import numpy_support as VN
 from matplotlib import pyplot as plt
-import vtk.numpy_interface.dataset_adapter as dsa
-import vtk
 # local import
 from PIL import Image
-from vtk.util import numpy_support as VN
-import vtk
-import vtk.numpy_interface.dataset_adapter as dsa
 import pandas as pd
 from mpl_toolkits.mplot3d import Axes3D
 from sklearn.neural_network import MLPRegressor
